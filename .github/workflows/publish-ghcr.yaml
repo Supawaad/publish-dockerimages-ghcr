@@ -10,4 +10,4 @@ jobs:
         run:  |
           docker login --username supawaad --password ${{secrets.GH_PAT}} ghcr.io
           docker build . --tag ghcr.io/supawaad/hello-world-cr:latest
-          docker push ghcr.io/supawaad/hello-world-2:latest
+          docker push ghcr.io/supawaad/hello-world:latest
