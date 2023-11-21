@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello from entrypoint new 2!"
+echo "Hello pla 2!"
