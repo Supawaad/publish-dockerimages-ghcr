@@ -1,0 +1,13 @@
+name: Docker Image CI for GHCR
+on: 
+  push
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push the image
+        run:  |
+          docker login --username supawaad --password ${{secrets.GH_PAT}} ghcr.io
+          docker build . --tag ghcr.io/supawaad/hello-world-cr:latest
+          docker push ghcr.io/supawaad/hello-world-2:latest
